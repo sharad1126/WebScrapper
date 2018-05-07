@@ -2,7 +2,7 @@
 
 Crawling webpages with selenium using Chrome driver/Firefox headless 
 
-#Installation
+# Installation
 
 Assuming that you have  [Selenium](http://selenium-python.readthedocs.io/installation.html),  [Chrome driver](http://chromedriver.chromium.org/getting-started) and [Firefox headless](https://developer.mozilla.org/en-US/Firefox/Headless_mode) installed:
 
@@ -12,7 +12,7 @@ cd WebScrapper
 pip install -r requirements.txt
 ```
 
-#Usage
+# Usage
 
 ```
 python final_crawl_selenium.py
@@ -23,11 +23,11 @@ python webpage_screenshot.py
 
 ```
 
-#Results
+# Results
 
 ##Screenshot 
 ![Screenshot](test.png)
 
-#Author
+# Author
 
 Sharad Agarwal <sharad.agarwal@cern.ch>
