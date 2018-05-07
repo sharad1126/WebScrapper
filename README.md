@@ -25,7 +25,7 @@ python webpage_screenshot.py
 
 # Results
 
-##Screenshot 
+## Screenshot 
 ![Screenshot](test.png)
 
 # Author
