@@ -9,8 +9,8 @@ class Crawler(object):
   chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
-  driver.get('http://cafet-774-printer.cern.ch/#hld-devInfoPage')
-  sleep(20)
+  driver.get('http://elplclab01.cern.ch/index.htm')
+  sleep(30)
   print driver.page_source
   #print driver.title
   #driver.save_screenshot('/Users/SharadAggrawal/Desktop/web_scrapping_selenium/test.png')
