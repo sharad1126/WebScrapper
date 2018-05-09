@@ -6,10 +6,11 @@ from selenium.webdriver.chrome.options import Options
 class Crawler(object):
  def crawl_data(self):
   chrome_options = Options()
-  chrome_options.add_argument("--window-size=1920,1080")
+  chrome_options.add_argument('headless')#using headless so it doesn't opens chrome windows
+  #chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
-  driver.get('http://elplclab01.cern.ch/index.htm')
+  driver.get('http://plclabo02.cern.ch/index.htm')
   sleep(30)
   print driver.page_source
   #print driver.title
