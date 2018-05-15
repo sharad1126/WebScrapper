@@ -10,7 +10,7 @@ class Crawler(object):
   #chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
-  driver.get('http://plclabo02.cern.ch/index.htm')
+  driver.get('http://google.com/')
   sleep(30)
   print driver.page_source
   #print driver.title
