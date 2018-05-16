@@ -1,3 +1,8 @@
+import os
+import sys
+import subprocess
+import glob
+from os import path
 from time import sleep
 from selenium import webdriver
 from bs4 import BeautifulSoup
@@ -10,13 +15,14 @@ class Crawler(object):
   #chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
-  driver.get('http://google.com/')
+  driver.get('http://fa-ca1-prnt.cern.ch/')
   sleep(5)
-  #print driver.page_source
+  with open("out.txt", 'w') as f:
+	print >>f, driver.page_source
   #print driver.titles
   #driver.save_screenshot('/Users/SharadAggrawal/Desktop/web_scrapping_selenium/test.png')
-  bs = BeautifulSoup(driver.page_source, 'lxml')
-  print bs.find_all('a')
+  #bs = BeautifulSoup(driver.page_source, 'lxml')
+  #print bs.find_all('a')
   driver.quit()
 
 if __name__ == "__main__":
