@@ -11,10 +11,12 @@ class Crawler(object):
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
   driver.get('http://google.com/')
-  sleep(30)
-  print driver.page_source
-  #print driver.title
+  sleep(5)
+  #print driver.page_source
+  #print driver.titles
   #driver.save_screenshot('/Users/SharadAggrawal/Desktop/web_scrapping_selenium/test.png')
+  bs = BeautifulSoup(driver.page_source, 'lxml')
+  print bs.find_all('a')
   driver.quit()
 
 if __name__ == "__main__":
@@ -26,7 +28,7 @@ if __name__ == "__main__":
 # result = driver.find_element_by_class_name('profile-col-main')
 # htmlText =  result.get_attribute('innerHTML')
 # Here we  initialized the beautiful soup to extract data from the html
-# bs = BeautifulSoup(res.text, 'html.parser')
+
 # ele = bs.select_one('.profile-props')
 # currency = ele.select('.propblock-body')
 # Here we printing the crawled data
