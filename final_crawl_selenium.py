@@ -15,7 +15,7 @@ class Crawler(object):
   #chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
-  driver.get('http://192.168.0.90/')
+  driver.get('http://root:root@192.168.0.90/admin/about.shtml?id=16')
   sleep(15)
   print driver.page_source
       #with open("out.txt", 'w') as f:
