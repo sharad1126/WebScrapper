@@ -21,8 +21,8 @@ class Crawler(object):
   driver.get('https://npi156925.dyndns.cern.ch')
   sleep(15)
   print driver.page_source
-      #with open("out.txt", 'w') as f:
-      #print >>f, driver.page_source
+  #with open("out.txt", 'w') as f:
+  #  print >>f, driver.page_source
   #print driver.titles
   #driver.save_screenshot('/Users/SharadAggrawal/Desktop/web_scrapping_selenium/test.png')
   #bs = BeautifulSoup(driver.page_source, 'lxml')
