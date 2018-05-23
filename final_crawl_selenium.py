@@ -12,10 +12,13 @@ class Crawler(object):
  def crawl_data(self):
   chrome_options = Options()
   chrome_options.add_argument('headless')#using headless so it doesn't opens chrome windows
+  chrome_options.add_argument('--ignore-certificate-errors')
+  chrome_options.add_argument('--no-sandbox')
   #chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
-  driver.get('http://root:root@192.168.0.90/admin/about.shtml?id=16')
+  #driver.get('http://root:root@192.168.0.90/admin/about.shtml?id=16')
+  driver.get('https://npi156925.dyndns.cern.ch')
   sleep(15)
   print driver.page_source
       #with open("out.txt", 'w') as f:
