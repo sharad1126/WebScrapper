@@ -19,8 +19,8 @@ class Crawler(object):
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
   #driver.get('http://root:root@192.168.0.90/admin/about.shtml?id=16')
   #driver.get('http://npi156925.dyndns.cern.ch')
-  driver.get('https://128.141.238.185')
-  sleep(80)
+  driver.get('http://128.141.48.160')
+  sleep(30)
   driver.save_screenshot('/Users/SharadAggrawal/Desktop/test.png')
   print driver.page_source
   #with open("out.txt", 'w') as f:
