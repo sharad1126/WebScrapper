@@ -18,9 +18,10 @@ class Crawler(object):
   chrome_options.add_argument('--no-sandbox')
   #chrome_options.add_argument("--window-size=1920,1080")
   # Using the crome driver file path
-  #desired_capabilities cap = desired_capabilities.chrome();
-  #cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-  driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options)  # Optional argument, if not
+  desired_capabilities = DesiredCapabilities.CHROME.copy()
+  desired_capabilities['acceptSslCerts'] = True
+  desired_capabilities['acceptInsecureCerts'] = True
+  driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options, desired_capabilities = desired_capabilities)
   #driver.get('http://root:root@192.168.0.90/admin/about.shtml?id=16')
   #driver.get('http://npi156925.dyndns.cern.ch')
   driver.get('https://172.26.103.235')
