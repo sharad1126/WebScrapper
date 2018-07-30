@@ -22,16 +22,16 @@ class Crawler(object):
   desired_capabilities['acceptSslCerts'] = True
   desired_capabilities['acceptInsecureCerts'] = True
   driver = webdriver.Chrome('/Users/SharadAggrawal/Downloads/chromedriver', chrome_options=chrome_options, desired_capabilities = desired_capabilities)
-  #driver.get('http://root:root@192.168.0.90/admin/about.shtml?id=16')
-  #driver.get('http://npi156925.dyndns.cern.ch')
-  driver.get('https://172.26.104.208')
+  #driver.get('http://root:root@<url/ip>')
+  #driver.get('<ip addresss/url>')
+  driver.get('https://<ip>')
   sleep(50)
-  driver.save_screenshot('/Users/SharadAggrawal/Desktop/test.png')
+  driver.save_screenshot('<path to save>/<file name>.png')
   print driver.page_source
   #with open("out.txt", 'w') as f:
   #  print >>f, driver.page_source
   #print driver.titles
-  #driver.save_screenshot('/Users/SharadAggrawal/Desktop/web_scrapping_selenium/test.png')
+  #driver.save_screenshot('<path to save>/<file name>.png')
   #bs = BeautifulSoup(driver.page_source, 'lxml')
   #print bs.find_all('a')
   driver.quit()
